@@ -1,0 +1,61 @@
+@import "src/assets/styles/global";
+
+header {
+  h1 {
+    margin: 0 auto 20px;
+    width: max-content;
+  }
+}
+
+form {
+  .edit {
+    margin: 5px 5%;
+
+    *:not(label) {
+      color: black;
+    }
+
+    label {
+      width: 45%;
+      height: 30px;
+    }
+
+    input {
+      width: 55%;
+      height: 30px;
+      background-color: lightgray;
+      border: 2px solid $white;
+      border-radius: 5px;
+    }
+
+    input:hover {
+      background-color: $blue;
+      color: $white;
+    }
+
+    input:focus {
+      outline: none;
+      border: 2px solid $blue;
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+footer {
+  margin: 20px auto 0;
+  width: max-content;
+
+  /*
+  button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: gray;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: rgba(46, 196, 182, 0.9);
+  }
+  */
+}

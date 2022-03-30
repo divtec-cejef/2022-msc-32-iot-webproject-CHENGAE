@@ -1,0 +1,51 @@
+<div class="container borderContent">
+  <h1 id="title">Température</h1>
+  <hr class="separator">
+
+  <h2 id="time">{{getFullDate(getLastMeasure().time)}}</h2>
+
+  <div class="data row justify-content-around">
+    <div class="temperature col-4">
+      <div class="current">
+        <img src="assets/img/thermometer_white.png" alt="Icone Thermomètres" class="iconCurrent temperature">
+        <h2>{{getLastMeasure().temperature}} °C</h2>
+      </div>
+
+      <div class="min-max borderContent row justify-content-center">
+        <div class="col">
+          <h2>Min</h2>
+          <h3 class="valueMin">{{getMinTemperature()}} °C</h3>
+        </div>
+        <div class="col">
+          <h2>Max</h2>
+          <h3 class="valueMax">{{getMaxTemperature()}} °C</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="humidity col-4">
+      <div class="current">
+        <img src="assets/img/humidity_white.png" alt="Icone Humidité" class="iconCurrent temperature">
+        <h2>{{getLastMeasure().humidity}} %</h2>
+      </div>
+
+      <div class="min-max borderContent row">
+        <div class="col">
+          <h2>Min</h2>
+          <h3 class="valueMin">{{getMinHumidity()}} %</h3>
+        </div>
+        <div class="col">
+          <h2>Max</h2>
+          <h3 class="valueMax">{{getMaxHumidity()}} %</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="separator">
+
+  <div class="information row justify-content-around">
+    <p class="device borderContent col-3">Capteur ID : {{getDefaultDevice()}}</p>
+
+    <p class="room borderContent col-3">Pièce : {{getDefaultRoom()}}</p>
+  </div>
+</div>

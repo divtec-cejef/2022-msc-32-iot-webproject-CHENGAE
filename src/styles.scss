@@ -1,0 +1,39 @@
+@import "src/assets/styles/global";
+
+html {
+  font-family: Roboto, 'Roboto Light', sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+  color: $textColor;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Roboto Light', sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+
+  .background {
+    background-image: url("assets/img/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+  }
+
+  .transparence {
+    background-color: $backgroundWallpaper;
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}

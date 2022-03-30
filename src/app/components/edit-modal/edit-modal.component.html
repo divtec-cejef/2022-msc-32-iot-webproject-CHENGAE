@@ -1,0 +1,23 @@
+<div id="modal-content-wrapper">
+  <header id="modal-header">
+    <h1 id="modal-title">Modification</h1>
+    <hr>
+  </header>
+
+  <form id="frmEdit">
+    <div id="temperature" class="edit">
+      <label for="editTemperature">Température :</label>
+      <input type="text" value="{{data.temperature}}" id="editTemperature">
+    </div>
+
+    <div id="humidity" class="edit">
+      <label for="editHumidity">Humidité :</label>
+      <input type="text" value="{{data.humidity}}" id="editHumidity">
+    </div>
+  </form>
+
+  <footer id="modal-footer">
+    <button type="button" (click)="submitModal()">Appliquer</button>
+    <button type="button" (click)="closeModal()">Annuler</button>
+  </footer>
+</div>

@@ -1,0 +1,17 @@
+@import "src/assets/styles/global";
+
+header {
+  h1 {
+    margin: 0 auto 20px;
+    width: max-content;
+  }
+}
+
+p {
+  text-align: center;
+}
+
+footer {
+  margin: 20px auto 0;
+  width: max-content;
+}

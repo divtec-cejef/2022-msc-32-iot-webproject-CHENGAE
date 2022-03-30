@@ -1,0 +1,62 @@
+@import "src/assets/styles/global";
+
+.filter {
+  margin: 15px;
+
+  form {
+    width: max-content;
+    margin: 0 auto;
+
+    label {
+      margin-right: 10px;
+    }
+
+    select, input {
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid $white;
+      background-color: $white;
+      color: black;
+      margin-right: 30px;
+
+      option {
+        color: black;
+      }
+    }
+  }
+}
+
+.my-custom-scrollbar {
+  height: 65vh;
+  overflow: auto;
+  display: block;
+  padding: 0 25px;
+
+  table {
+    thead {
+      position: sticky;
+      top: 0;
+      background-color: $black;
+
+      th:not(:first-child) {
+        text-align: center;
+      }
+    }
+
+    tbody {
+      z-index: -1;
+
+      td {
+        text-align: center;
+      }
+
+      tr:hover {
+        background-color: rgba($black, 0.65);
+      }
+    }
+
+    th, td {
+      border: none;
+    }
+  }
+}

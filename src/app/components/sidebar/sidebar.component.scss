@@ -1,0 +1,79 @@
+.sidebar-wrapper {
+  min-width: 60px;
+  width: 0;
+  min-height: 100vh;
+  background-color: #343a40;
+  transition: width .3s ease-in-out;
+
+  &::selection {
+    background: none;
+  }
+
+  .logo-container {
+    width: 60px;
+    height: 60px;
+
+    img {
+      max-height: 40px;
+      object-fit: cover;
+    }
+  }
+
+  hr {
+    border: 1px solid white;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: block;
+
+      a {
+        font-size: 1.3em;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: #2d8ac8;
+          background-color: #24292f;
+        }
+
+        .icon-wrapper {
+          min-width: 28px;
+          max-width: 28px;
+
+          .icon {
+            margin: 0 auto;
+          }
+        }
+
+        .text {
+          display: block;
+          opacity: 0;
+          overflow: hidden;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-wrapper:hover {
+  width: 200px;
+
+  ul {
+    li {
+      a {
+        span.text {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+

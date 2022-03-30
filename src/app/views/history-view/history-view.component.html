@@ -1,0 +1,55 @@
+<div class="container borderContent">
+  <h1>Historique</h1>
+  <hr class="separator">
+
+  <div class="filter">
+    <form id="frm_filter">
+      <label for="filterDevices">Device :</label>
+      <select id="filterDevices" name="filterDevice">
+        <option value="-1">Tous les devices</option>
+        <option *ngFor="let device of devices" value="{{device.id}}">{{device.name}}</option>
+      </select>
+
+      <label for="filterDate">Date :</label>
+      <input type="date" id="filterDate" name="filterDate" value="" min="{{getDateForm(getDateMin())}}" max="{{getDateForm(getDateNow())}}">
+
+      <button type="button" name="bt_filterApply" (click)="getByFilter()">Appliquer</button>
+      <button type="button" name="bt_filterReset" (click)="resetFilter()">Reset</button>
+    </form>
+  </div>
+
+  <div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-striped mb-0" id="history">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom Device</th>
+          <th scope="col">Température</th>
+          <th scope="col">Humidité</th>
+          <th scope="col">Date</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let measure of measures; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{measure.device.name}}</td>
+          <td>{{measure.temperature}} °C</td>
+          <td>{{measure.humidity}} %</td>
+          <td>{{getDate(measure.time)}}, {{getHours(measure.time)}}</td>
+          <td>
+            <button type="button" name="bt_edit" (click)="openEditModal(measure)">
+              <span class="icon-wrapper d-flex"><i class="icon fas fa-pen" draggable="false"></i></span>
+            </button>
+
+            <button type="button" name="bt_delete" (click)="openDeleteModal(measure.id)">
+              <span class="icon-wrapper d-flex"><i class="icon fas fa-trash" draggable="false"></i></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

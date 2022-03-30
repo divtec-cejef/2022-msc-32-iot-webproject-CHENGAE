@@ -1,0 +1,14 @@
+<div class="sidebar-wrapper">
+  <div class="logo-container p-2 d-flex align-items-center justify-content-center flex-wrap mx-auto">
+    <img class="d-block" src="assets/img/logo.png" alt="Logo">
+  </div>
+  <hr>
+  <ul class="p-0">
+    <li *ngFor="let route of routes; let i = index">
+      <a class="p-3 d-flex align-items-center" draggable="false" routerLink="{{route.path}}">
+        <span class="icon-wrapper d-flex"><i class="icon fas fa-{{route.icon}}" draggable="false"></i></span>
+        <span class="ms-2 text">{{route.text}}</span>
+      </a>
+    </li>
+  </ul>
+</div>

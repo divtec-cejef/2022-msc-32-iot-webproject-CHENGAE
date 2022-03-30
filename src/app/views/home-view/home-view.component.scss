@@ -1,0 +1,42 @@
+@import "src/assets/styles/global";
+
+div.container {
+  text-align: center;
+
+  #time {
+    padding: 20px 0;
+  }
+
+  .data {
+    .temperature,
+    .humidity {
+
+      .min-max {
+        padding: 20px 0;
+
+        h3 {
+          margin: 0;
+        }
+
+        .valueMin {
+          color: $blue;
+        }
+
+        .valueMax {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .information {
+    p {
+      padding: 10px;
+    }
+  }
+
+  .iconCurrent {
+    width: 128px;
+    margin: 20px 0;
+  }
+}
